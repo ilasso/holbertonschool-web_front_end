@@ -8,7 +8,9 @@ html{
 	--color-primary:#d73953;
 	--color-black:#090909;
 	--color-white: #ffffff;
-	--color-light-grey: #f3f3f3;
+	-webkit-column-rule: ;
+	-moz-column-rule: ;
+	column-rule: ;-light-grey: #f3f3f3;
 	--color-dark-grey: #353535;
 	--text-color: var(--color-black);
 	--font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif ;
@@ -19,7 +21,13 @@ h1, h2, h3, h4, h5, h6{
 	/* use custome property --font-family-title defined in root*/
 	font-family: var(--font-family-title);
 }
-body, a {
+
+a {
+		/* set black foreground color using --text-color custom property*/
+	color: var(--text-color);
+	}
+
+body {
 	/* set black foreground color using font-family property defined
 	   in root as --font-family-base custom*/
 	color: var(--text-color);
