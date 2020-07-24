@@ -22,6 +22,9 @@ html {
 	--font-size-xx-large: 4.8rem;
 	--font-weight-regular: 400;
   --font-weight-bold: 700;
+	--line-height-small: 1.2;
+	--line-height-base: 1.5;
+	--line-height-big: 1.8;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -38,11 +41,13 @@ a {
 body {
 	/* set black foreground color using font-family property defined
 	   in root as --font-family-base custom
-		 set medium as a size font*/
+		 set medium as a size font
+		 define space between line and line line-height*/
 	color: var(--text-color);
 	font-family: var(--font-family-base);
 	font-size: var(--font-size-medium);
 	font-weight: var(--font-weight-regular);
+	line-height: var(--line-height-base);
 	}
 
 .visually-hidden {

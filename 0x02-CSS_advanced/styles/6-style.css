@@ -5,7 +5,7 @@ html {
 	scroll-behavior: smooth;
 	font-size: 62.5%;
 }
-html {
+:root {
 	/* define custom properties to root*/
 	--color-primary:#d73953;
 	--color-black:#090909;
