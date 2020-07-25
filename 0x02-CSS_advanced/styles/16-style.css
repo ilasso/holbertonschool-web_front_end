@@ -62,11 +62,6 @@ a:active{
 		background-color:var(--color-light-grey);
 	}
 
-
-
-
-
-
 body {
 	/* set black foreground color using font-family property defined
 	   in root as --font-family-base custom
@@ -117,5 +112,5 @@ Use the section-title-color to set the text color*/
 
 .container{
 	width: 960px;
-	margin: 0 auto;
+	margin: auto auto;
 }
