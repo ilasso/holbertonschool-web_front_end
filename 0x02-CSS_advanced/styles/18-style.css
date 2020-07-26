@@ -164,7 +164,7 @@ Use the section-title-color to set the text color*/
   font-family: var(--nav-item-font-family);
   font-weight: var(--nav-item-font-weight);
   font-size: var(--nav-item-font-size);
-  line-height: var(--nav-item-letter-spacing) ;
+  letter-spacing: var(--nav-item-letter-spacing) ;
   display: var(--nav-item-display);
   margin: var(--nav-item-margin);
   }
@@ -177,6 +177,6 @@ Use the section-title-color to set the text color*/
   padding-bottom: 0.5rem;
 }
 
-.nav.nav-link:hover{
+.nav .nav-link:hover{
   color:var(--nav-item-link-hover);
 }
