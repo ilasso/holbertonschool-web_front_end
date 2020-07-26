@@ -180,7 +180,7 @@ Use the section-title-color to set the text color*/
   color:var(--nav-item-link-hover);
 }
 
-ul.row {
+ul.row{
   margin: 0;
   padding: 0;
   list-style: none;
@@ -192,7 +192,7 @@ ul.row {
   padding: 0.5rem;
 }
 
-.col-1-2 {
+.col-1-2{
   width: 50%;
   float: left;
   padding: 0.5rem;
