@@ -1,0 +1,20 @@
+/*9-extend_list.scss: uses extend declarations */ 
+
+
+%ext-font-size {
+	font-size: 12px;
+}
+
+.info {
+	@extend %ext-font-size;
+}
+
+.success {
+	color: #00FF00;
+	@extend %ext-font-size;
+}
+
+.warning {
+	color: #FF0000; 
+	@extend %ext-font-size;
+}
