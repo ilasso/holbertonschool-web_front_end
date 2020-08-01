@@ -1,0 +1,14 @@
+/*2-color_variables.scss: uses two variables to asign color property */ 
+
+$foregroundcolor: #3D3D3D;
+$backgroundcolor: #6D6D6D;
+
+body {
+  color: $foregroundcolor;
+  background-color: $backgroundcolor; }
+
+p {
+  color: $foregroundcolor; }
+
+h2 {
+  background-color: $backgroundcolor; }
