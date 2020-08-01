@@ -1,9 +1,7 @@
-/*5-nested_child.scss : uses nested declarations with child*/ 
-
-
+/*6-nested_hover.scss : uses nested declarations with hover*/ 
 
 button {
   color: #FF0000; 
-	:hover {
+	&:hover {
   		color: #00FF00; }
 	}
