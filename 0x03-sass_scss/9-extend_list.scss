@@ -10,11 +10,11 @@
 }
 
 .success {
-	color: #00FF00;
 	@extend %ext-font-size;
+	color: #00FF00;
 }
 
 .warning {
-	color: #FF0000; 
 	@extend %ext-font-size;
+	color: #FF0000; 
 }
