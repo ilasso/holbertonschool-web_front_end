@@ -1,0 +1,9 @@
+/*1-color_variable.scss: uses a variable to asign color property */ 
+
+$foregroundcolor: #3D3D3D;
+
+body {
+  color: $foregroundcolor; }
+
+p {
+  color: $foregroundcolor; }
