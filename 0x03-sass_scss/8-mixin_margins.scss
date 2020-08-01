@@ -1,0 +1,15 @@
+/*8-mixin_margins.scss : uses margin mixin declarations */ 
+
+@mixin marg($propleft, $propright) {
+	margin-left: $propleft;
+	margin-right: $propright;
+	}
+
+body {
+	@include marg(10px, 10px);
+}
+
+div {
+	@include marg(15px, 15px);
+
+}
