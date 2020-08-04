@@ -174,7 +174,7 @@
 
   /* Grid
       ============================= */
-  .row{
+  .row {
     display:flex;
   }
 
@@ -216,7 +216,7 @@
     letter-spacing: var(--nav-item-letter-spacing);
   }
 
-  .nav .nav-item + .nav-item{
+  .nav .nav-item + .nav-item {
     margin: var(--nav-item-margin);
   }
 
@@ -250,7 +250,7 @@
   /* Header
       ============================= */
 
-  .header-container{
+  .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -363,11 +363,11 @@
   }
 
   /* Section Latest news ============================= */
-  .section-latest-news .row{
+  .section-latest-news .row {
     flex-direction: row-reverse;
   }
   /* Section SERVICES ============================= */
-  .section-services .row{
+  .section-services .row {
     flex-wrap: wrap;
   }
 
