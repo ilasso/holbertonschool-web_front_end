@@ -174,7 +174,7 @@
 
   /* Grid
       ============================= */
-  .row{
+  .row {
     display:flex;
   }
 
@@ -247,7 +247,7 @@
   /* Header
       ============================= */
 
-  .header-container{
+  .header-container {
     display: flex;
     justify-content: space-between;
   }
@@ -359,11 +359,11 @@
   }
 
   /* Section Latest news ============================= */
-  .section-latest-news .row{
+  .section-latest-news .row {
     flex-direction: row-reverse;
   }
   /* Section SERVICES ============================= */
-  .section-services .row{
+  .section-services .row {
     flex-wrap: wrap;
   }
 
