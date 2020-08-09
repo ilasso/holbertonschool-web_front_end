@@ -695,7 +695,7 @@ input[type=text], input[type=email], textarea {
       padding: 1.2rem;
       line-height: 1;
       border: .1rem solid var(--color-black);
-      background-color: var(--colo-white);
+      background-color: var(--color-white);
       box-shadow: none;
       outline: 0;
 }
