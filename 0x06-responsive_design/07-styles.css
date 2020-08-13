@@ -99,17 +99,6 @@
   /* Base
       ============================= */
 
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 57%;
-    }
-  }
-
-  @media screen and (min-width: 481) and (max-width: 767) {
-    html {
-      font-size: 60%;
-    }
-  }
 
   *, *:before, *:after {
     box-sizing: border-box;
@@ -119,6 +108,18 @@
   scroll-behavior: smooth;
   font-size: 62.5%;
   }
+
+  @media screen and (max-width: 480px) {
+    html {
+      font-size: 57%;
+      }
+    }
+
+    @media screen and (min-width: 481) and (max-width: 767) {
+      html {
+        font-size: 60%;
+      }
+    }
 
   body {
     color: var(--text-color);
