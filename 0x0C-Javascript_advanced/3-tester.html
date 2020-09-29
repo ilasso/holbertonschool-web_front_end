@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>tester</title>
+    <script type="text/javascript" src="3-classrooms.js"></script>
+  </head>
+  <body>
+    <p>Click to excecute test:</p>
+    <button type="button" onclick="testclassroom()">Test Now!</button>
+    <p id="out1"></p>
+    <p id="out2"></p>
+    <p id="out3"></p>
+
+    <script>
+      function testclassroom(){
+        let arr = createClassRoom(10);
+        document.getElementById('out1').innerHTML = arr[0]();
+        document.getElementById('out2').innerHTML = arr[3]();
+        document.getElementById('out3').innerHTML = arr[9]();
+      }
+    </script>
+
+  </body>
+
+</html>
