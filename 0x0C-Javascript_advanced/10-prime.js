@@ -1,4 +1,4 @@
-/* Prime numbers & timing execution*/
+/* Execution stack & timing execution*/
 
 function countPrimeNumbers() {
   let countPrimeNumbers = 0
@@ -17,7 +17,9 @@ function countPrimeNumbers() {
   return countPrimeNumbers
 }
 t0 = performance.now();
-countPrimeNumbers()
+for (let i = 0; i < 100; i++) {
+  countPrimeNumbers();
+}
 t1 = performance.now();
 time = t1 - t0
 console.log(`Execution time of printing countPrimeNumbers was ${time} milliseconds.`)
