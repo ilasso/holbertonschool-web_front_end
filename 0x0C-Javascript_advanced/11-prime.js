@@ -1,8 +1,9 @@
-/* Execution stack & timing execution*/
+/* Changing stack order using setTimeout*/
 
 function countPrimeNumbers() {
   let countPrimeNumbers = 0
   let count
+  console.log("Inside countPrimeNumbers at the end after 2 seconds")
   for (let i = 1; i < 100; i++) {
     count = 0
     for (let j = 1; j <= i ; j++) {
@@ -18,8 +19,8 @@ function countPrimeNumbers() {
 }
 t0 = performance.now();
 for (let i = 0; i < 100; i++) {
-  countPrimeNumbers();
+  setTimeout(function() {countPrimeNumbers()},2000);
 }
 t1 = performance.now();
 time = t1 - t0
-console.log(`Execution time of calculating prime numbers 100 times was ${time} milliseconds.`)
+console.log(`Execution time of calculating prime numbers 100 times was ${time} milliseconds.`);
