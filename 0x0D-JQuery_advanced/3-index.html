@@ -10,26 +10,28 @@
           $(document).ready(function(){
               function createFamilyTree() {
                 $("body").append(`<table></table>`);
-                $("table").append(`<tr></tr>`);
+                $("table").append("<thead></thead>")
+                $("table").append("<tbody></tbody>")
+                $("thead").append(`<tr></tr>`);
                 $("tr").append(`<th></th>`);
                 $("tr th").eq(0).text(`Firstname`);
                 $("tr").append(`<th></th>`);
                 $("tr th").eq(1).text(`Lastname`);
 
                 <!-- Guillaume-->
-                $("table").append(`<tr></tr>`);
+                $("tbody").append(`<tr></tr>`);
                 $("tr").eq(1).append(`<td></td>`)
                 $("tr td").eq(0).text(`Guillaume`);
                 $("tr").eq(1).append(`<td></td>`)
                 $("tr td").eq(1).text(`Salva`);
                 <!-- Pauline-->
-                $("table").append(`<tr></tr>`);
+                $("tbody").append(`<tr></tr>`);
                 $("tr").eq(2).append(`<td></td>`)
                 $("tr td").eq(2).text(`Paulette`);
                 $("tr").eq(2).append(`<td></td>`)
                 $("tr td").eq(3).text(`Salva`);
                 <!-- Antoine-->
-                $("table").append(`<tr></tr>`);
+                $("tbody").append(`<tr></tr>`);
                 $("tr").eq(3).append(`<td></td>`)
                 $("tr td").eq(4).text(`Antoine`);
                 $("tr").eq(3).append(`<td></td>`)
