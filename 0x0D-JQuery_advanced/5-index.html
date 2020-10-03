@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 1</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            let register = 1
+            let trtd = 0
+            function createFamilyTree() {
+              $("body").append(`<table></table>`);
+              $("table").append("<thead></thead>");
+              $("table").append("<tbody></tbody>")
+              $("thead").append(`<tr></tr>`);
+              $("tr").append(`<th></th>`);
+              $("tr th").eq(0).text(`Firstname`);
+              $("tr").append(`<th></th>`);
+              $("tr th").eq(1).text(`Lastname`);
+              }
+              function addNewMember(firstName, lastName) {
+
+                $("tbody").append(`<tr></tr>`);
+                console.log(register);
+                $("tr").eq(register).append(`<td></td>`)
+                $("tr td").eq(trtd).text(`${firstName}`);
+
+                trtd+=1
+
+                $("tr").eq(register).append(`<td></td>`)
+                $("tr td").eq(trtd).text(`${lastName}`);
+
+                trtd+=1
+                $("tr").eq(register).append(`<td></td>`)
+                $("tr td").eq(trtd).text(`(x)`);
+                $("tr td").eq(trtd).css("background-color", "orange");
+                $("tr td").eq(trtd).click(function() {
+                                        $(this).parent().remove();
+                                    });
+
+                trtd+=1
+
+              }
+              createFamilyTree();
+              addNewMember("Guillaume","Salva");
+              register+=1;
+              addNewMember("Arielle","Snizt");
+              register+=1;
+              addNewMember("Fanette","Snizt");
+              register+=1;
+              addNewMember("Gerard","Snizt");
+              register+=1;
+              addNewMember("Victor","Salva");
+            });
+
+        </script>
+    </head>
+
+    <body>
+
+
+    </body>
+
+</html>
