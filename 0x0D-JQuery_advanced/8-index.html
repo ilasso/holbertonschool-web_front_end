@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 8</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script type="application/javascript">
+          $(document).ready(function(){
+              function createSearchForm() {
+                  $("body").append(
+                  `<input type="text" name="text" value="">` +
+                  `<input type="submit" id="submit" name="submit" class="submit">`)
+                  $(".submit").click(function () {
+                      queryWikipedia($("input:text[name=text]").val())
+                        }
+                      );
+                  $("body").append(`<ul></ul>`)
+                  $("body").append(`<ul id="pagination"></ul>`)
+              } //createSearchForm
+
+              function addNewArticle(id, title, snippet) {
+                $("ul").append(`<li><p><span>${id}-<b>${title}</b></span></p><p>${snippet}</p></li>`).css("list-style", "none")
+              }
+
+              function queryWikipedia(search, offset=0) {
+                $.ajax({
+                  dataType:"json",
+                  contentType: "application/json",
+                  url:`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${search}&sroffset=${offset}&format=json&callback=?`,
+                  success:function(result){
+                          $("ul:nth-of-type(1)").empty()
+                          result.query.search.forEach(function(row){
+                                      addNewArticle(row.pageid, row.title, row.snippet);
+                                  });
+                          buildPagination(result.query.searchinfo.totalhits, 10, result.continue.sroffset)
+                          }
+                }); //ajax
+
+              } //queryWikipedia
+              function buildPagination(numberOfItems, itemsPerPage, currentOffset) {
+                $("#pagination").empty()
+                for (let i = 0; i < numberOfItems / itemsPerPage; i++) {
+                    $("#pagination").append(`<a class="pag${i + 1}"><li>${i + 1}</li></a>`)
+                }
+                $("li").css({
+                            display: "inline",
+                            "margin-left": "10px",
+                            cursor: "pointer",
+                          });
+
+                $(`.pag${(currentOffset/10)}`).css("font-weight", "bold")
+
+                $("a").click(function () {
+                     const val = this.children["0"].innerText
+                     currentOffset = 10*(val-1)
+                     $(`.pag${val}`).css("font-weight", "bold")
+                     queryWikipedia($("input:text[name=text]").val(), currentOffset)
+                   });
+
+              } //buildPagination
+              createSearchForm()
+            }); // code
+
+        </script>
+    </head>
+
+    <body>
+
+
+    </body>
+
+</html>
