@@ -1,11 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
       "title": "fd",
       "author": "fffff",
       "id": 2
@@ -14,11 +9,6 @@
       "title": "fd",
       "author": "fffff",
       "id": 3
-    },
-    {
-      "title": "f",
-      "author": "f",
-      "id": 4
     },
     {
       "title": "",
@@ -43,17 +33,7 @@
     {
       "title": "",
       "author": "",
-      "id": 9
-    },
-    {
-      "title": "",
-      "author": "",
       "id": 10
-    },
-    {
-      "author": "ivan",
-      "title": "lasso",
-      "id": 11
     },
     {
       "author": "sandra",
@@ -281,11 +261,6 @@
       "id": 56
     },
     {
-      "author": "sandra",
-      "title": "gil",
-      "id": 57
-    },
-    {
       "author": "carmen",
       "title": "perdomo",
       "id": 58
@@ -306,43 +281,17 @@
       "id": 61
     },
     {
-      "author": "andres F",
-      "title": "gil",
-      "id": 62
-    },
-    {
       "author": "sandra",
       "title": "Lasso Perdomo",
       "id": 63
     },
     {
-      "author": "jose f",
-      "title": "lasso",
-      "id": 64
-    },
-    {
       "author": "carlos andres",
       "title": "lasso gil",
       "id": 65
-    },
-    {
-      "author": "carlos andres",
-      "title": "lasso gil",
-      "id": 66
-    },
-    {
-      "author": "carlos andres",
-      "title": "lasso gil",
-      "id": 67
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }
