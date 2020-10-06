@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Task 0</title>
+  </head>
+  <body>
+    <h1>Login to the website</h1>
+    <input id="firstname" type="text" name="email" value="Firstname">
+    <input id="email" type="text" name="email" value="Email">
+    <button type="button" name="buttonlogmein" onclick="setCookies()">Log me in</button>
+    <h1>Cookies</h1>
+    <button type="button" name="buttonshowcookies" onclick="showCookies()">Show the cookies</button>
+
+    <script type="text/javascript">
+      function setCookies() {
+        let exdays = 3 // 3 days
+        let d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires="+ d.toUTCString();
+        document.cookie = "firstname" + "=" + `${document.getElementById('firstname').value}` + ";" + expires + ";path=/";
+        let cookie = "firstname" + "=" + `${document.getElementById('firstname').value}` + ";" + expires + ";path=/";
+        document.cookie = "email" + "=" + `${document.getElementById('email').value}` + ";" + expires + ";path=/";
+        }
+      function showCookies() {
+        let data = []
+        let cookies = document.cookie.split(";");
+        console.log(cookies)
+        for (let i in cookies) {
+            data.push(cookies[i].split("=")[1]);
+        }
+        console.log(data)
+        let p = document.createElement("p");
+        p.innerText = `Cookies: ${data[0]}, ${data[1]}`;
+        document.body.appendChild(p);
+      }
+    </script>
+  </body>
+</html>
