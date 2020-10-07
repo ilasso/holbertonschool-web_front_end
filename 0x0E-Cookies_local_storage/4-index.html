@@ -10,7 +10,7 @@
       <h2>Login to the website</h2>
       <input id="firstname" type="text" name="email" value="Firstname">
       <input id="email" type="text" name="email" value="Email">
-      <button type="button" name="buttonlogmein" onclick="setCookies()">Log me in</button>
+      <button type="button" name="buttonlogmein" onclick="setCookiesAndShowWelcomeMessage()">Log me in</button>
     </div>
 
     <script type="text/javascript">
@@ -51,14 +51,13 @@
       function setCookies() {
         Cookies.set("firstname", document.getElementById("firstname").value, {expires: 10})
         Cookies.set("email", document.getElementById("email").value, {expires: 10})
-        showWelcomeMessageOrForm();
         }
 
       function showCookies() {
         let p = document.createElement("p");
         p.innerText = `Email: ${Cookies.get("email")} - Firstname: ${Cookies.get("firstname")}`;
         document.body.appendChild(p);
-      }
+        }
       function setCookiesAndShowWelcomeMessage() {
         setCookies()
         showWelcomeMessageOrForm()
